@@ -1,0 +1,17 @@
+streamlit
+pytesseract
+pdf2image
+python-docx
+Pillow
+openai
+groq
+numpy
+opencv-python
+pandas
+streamlit
+pytesseract
+Pillow
+pdfplumber
+python-docx
+langchain_groq  # Or any other AI/LLM integration
+
