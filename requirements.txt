@@ -14,4 +14,5 @@ Pillow
 pdfplumber
 python-docx
 langchain_groq  # Or any other AI/LLM integration
+python-dotenv
 
