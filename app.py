@@ -12,7 +12,7 @@ import re
 from fpdf import FPDF
 
 # Tesseract OCR path
-pytesseract.pytesseract.tesseract_cmd = r"C:\Users\akshit.j\Desktop\ml\.venv\tess\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = r"tess/tesseract.exe"
 
 # Load environment variables
 load_dotenv()
