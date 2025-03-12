@@ -110,7 +110,8 @@ def call_groqcloud_api(text):
         - Automatically calculate age from the birthdate if available (use today's date as reference)
         - Parse addresses into structured fields
         - Add custom fields based on content (e.g., emergency contacts, insurance details)
-        - Do not write anything else other than json format, no note or explanation needed.
+        [HIGH IMPORTANCE] Do not write anything else other than json format. No NOTE OR EXPLANATION NEEDS TO BE PRINTED AND FOLLOW THIS INSTRUCTION STRICTLY.
+        -IF THE DATA IS IN OTHER LANGUAGE THEN OTHER THAN NAME OTHER THINGS NEEDS TO BE TRANSLATED TO ENGLISH.
         Document:
         {text}
         """
