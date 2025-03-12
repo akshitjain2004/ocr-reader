@@ -91,9 +91,12 @@ def extract_text_from_docx(docx_file):
     except Exception as e:
         text = f"Error reading Word document: {str(e)}"
     return text
+#summarising beforew sending
+summary_prompt = "Summarize this text while keeping all key details:\n" + text
+summary = llm.invoke(summary_prompt)
 
 # Call to GroqCloud API with refined template
-def call_groqcloud_api(text):
+def call_groqcloud_api(summary):
     try:
         prompt = f"""
         Extract key patient information from the document.
@@ -113,7 +116,7 @@ def call_groqcloud_api(text):
         [HIGH IMPORTANCE] Do not write anything else other than json format. No NOTE OR EXPLANATION NEEDS TO BE PRINTED AND FOLLOW THIS INSTRUCTION STRICTLY.
         -IF THE DATA IS IN OTHER LANGUAGE THEN OTHER THAN NAME OTHER THINGS NEEDS TO BE TRANSLATED TO ENGLISH.
         Document:
-        {text}
+        {summary}
         """
         response = llm.invoke([prompt])
         return response.content
