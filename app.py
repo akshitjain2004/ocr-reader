@@ -19,7 +19,7 @@ from io import BytesIO
 
 # Load environment variables
 load_dotenv()
-API_KEY = os.getenv("GROQ_API_KEY")
+API_KEY = os.getenv("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")
 llm = ChatGroq(groq_api_key=API_KEY)
 
 # Load Azure credentials from environment variables
