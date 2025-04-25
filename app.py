@@ -20,7 +20,7 @@ from io import BytesIO
 # Load environment variables
 load_dotenv()
 API_KEY = os.getenv("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")
-llm = ChatGroq(groq_api_key=API_KEY)
+llm = ChatGroq(groq_api_key=API_KEY, model = "llama-3.3-70b-versatile")
 
 # Load Azure credentials from environment variables
 AZURE_ENDPOINT = os.getenv("AZURE_ENDPOINT")
